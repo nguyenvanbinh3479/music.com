@@ -1,7 +1,7 @@
 <?php 
   
   // check system
-  if ( ! defined('PATH_SYSTEM')) die ('Bad requested!');
+  if (!defined('PATH_SYSTEM')) die ('Bad requested!');
 
   // FT_Controller class
   class FT_Controller{

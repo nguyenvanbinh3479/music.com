@@ -1,7 +1,7 @@
 <?php
 
   // check system
-  if (!define('PATH_SYSTEM')) die ('Bad requested!');
+  if (!defined('PATH_SYSTEM')) die ('Bad requested!');
 
   // upload_library class
   class Upload_Library{

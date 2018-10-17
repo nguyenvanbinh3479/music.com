@@ -7,10 +7,10 @@
   define('PATH_APPLICATION', __DIR__.'/admin');
 
   // lấy thông số cấu hình
-  require (PATH_SYSTEM.'/config/config.php');
+  require (PATH_SYSTEM . '/config/config.php');
 
   // chạy hệ thống
-  include_once (PATH_SYSTEM.'/core/FT_Common.php');
+  include_once (PATH_SYSTEM . '/core/FT_Common.php');
 
   // chương trình chính
   FT_load();
