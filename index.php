@@ -7,14 +7,31 @@
     <title>Home</title>
   </head>
   <body>
+    <!-- begin menu list -->
     <ul>
       <?php
-        $i = 0;
-        for ($i = 0; $i < 10; $i++)
-        {
-          echo "<li> Home $i </li>"; 
+        $i = 1;
+        for ($i = 1; $i <= 5; $i++){
+          switch ($i){
+            case "1": 
+              echo "<li> Home </li>";
+            break;
+            case "2": 
+              echo "<li> Musics </li>";
+            break;
+            case "3": 
+              echo "<li> Singers </li>";
+            break;
+            case "4": 
+              echo "<li> Categories </li>";
+            break;
+            default: 
+              echo "<li> Contact </li>";
+            break;
+          } 
         }
       ?>
     </ul>
+    <!-- end menu list -->
   </body>
 </html>
