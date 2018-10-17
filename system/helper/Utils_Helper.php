@@ -1,7 +1,7 @@
 <?php
 
   // check system
-  if (!define('PATH_SYSTEM')) die ('bad requested!');
+  if (!defined('PATH_SYSTEM')) die ('bad requested!');
 
   // redirect_to function
   function redirect_to($url){

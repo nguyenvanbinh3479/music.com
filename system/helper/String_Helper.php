@@ -1,7 +1,7 @@
 <?php
 
   // check system
-  if (!define('PATH_SYSTEM')) die ('Bad requested!');
+  if (!defined('PATH_SYSTEM')) die ('Bad requested!');
 
   // string_to_int function
   function string_to_int($str){

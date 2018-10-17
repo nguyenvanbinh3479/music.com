@@ -1,12 +1,12 @@
 <?php
 
   // check system
-  if (!define('PATH_SYSTEM')) die ('Bad requested');
+  if (!defined('PATH_SYSTEM')) die ('Bad requested');
   
   // FT_Database class
   class FT_Database{
     private $conn;
-    private static function $myInstance = null;
+    private static $myInstance = null;
 
     // instance function
     public static function instance(){
