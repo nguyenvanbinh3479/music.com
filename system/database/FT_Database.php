@@ -22,7 +22,8 @@
     }
 
     // db_connect function
-    public function db_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME){
+    public function db_connect(){
+      $this->conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
       if ($this->conn){
         die('Fail to connect database ' . mysqli_connect_error());
       }

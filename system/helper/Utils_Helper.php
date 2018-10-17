@@ -1,7 +1,7 @@
 <?php
 
   // check system
-  if (! define('PATH_SYSTEM')) die ('bad requested!');
+  if (!define('PATH_SYSTEM')) die ('bad requested!');
 
   // redirect_to function
   function redirect_to($url){
@@ -17,7 +17,7 @@
   // go_back function
   function go_back(){
     if (isset($_SERVER["HTTP_REFERER"])){
-      header("location: " . $_SERVER["HTTP_REFERER"]);
+      header("Location: " . $_SERVER["HTTP_REFERER"]);
     }
   }
 
