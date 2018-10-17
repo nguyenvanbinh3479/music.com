@@ -11,10 +11,8 @@
     <ul>
       <?php
         $i = 1;
-        for ($i = 1; $i <= 5; $i++)
-        {
-          switch ($i) 
-          {
+        for ($i = 1; $i <= 5; $i++){
+          switch ($i){
             case "1": 
               echo "<li> Home </li>";
             break;
