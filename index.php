@@ -7,6 +7,7 @@
     <title>Home</title>
   </head>
   <body>
+    <!-- begin menu list -->
     <ul>
       <?php
         $i = 1;
@@ -33,5 +34,6 @@
         }
       ?>
     </ul>
+    <!-- end menu list -->
   </body>
 </html>
