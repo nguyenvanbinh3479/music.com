@@ -1,6 +1,17 @@
-</div>
 
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="copyright">
+                                <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> <a href="https://github.com/nguyenvanbinh3479">Kevin Anthony</a>. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
     <!-- Jquery JS-->
     <script src="public/js/jquery-3.3.1.min.js"></script>

@@ -5,12 +5,12 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
+    <meta name="description" content="Kevin Anthony">
+    <meta name="author" content="Kevin Anthony">
+    <meta name="keywords" content="Kevin Anthony">
 
     <!-- Title Page-->
-    <title><?php if(isset($title)) echo $title; ?></title>
+    <title>Dashboard</title>
 
     <!-- Fontfaces CSS-->
     <link href="public/css/font-face.css" rel="stylesheet" media="all">
@@ -490,3 +490,8 @@
             </section>
             <!-- END BREADCRUMB-->
             <!-- END PAGE CONTAINER-->
+            
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p10">
+                    <div class="container-fluid">
