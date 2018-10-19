@@ -61,6 +61,60 @@
                             </a>
                         </li>
                         <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-table"></i>Table
+                                <span class="arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </span>
+                            </a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="admin.php?c=user">
+                                        <i class="fas fa-users"></i>Users</a>
+                                </li>
+                                <li>
+                                    <a href="admin.php?c=song">
+                                        <i class="fas fa-users"></i>Songs</a>
+                                </li>
+                                <li>
+                                    <a href="admin.php?c=singer">
+                                        <i class="fas fa-users"></i>Singers</a>
+                                </li>
+                                <li>
+                                    <a href="admin.php?c=playlistdetail">
+                                        <i class="fas fa-users"></i>Playlists Detail</a>
+                                </li>
+                                <li>
+                                    <a href="admin.php?c=playlist">
+                                        <i class="fas fa-users"></i>Playlists</a>
+                                </li>
+                                <li>
+                                    <a href="admin.php?c=like">
+                                        <i class="fas fa-users"></i>Likes</a>
+                                </li>
+                                <li>
+                                    <a href="admin.php?c=user">
+                                        <i class="fas fa-users"></i>Hears</a>
+                                </li>
+                                <li>
+                                    <a href="admin.php?c=album">
+                                        <i class="fas fa-users"></i>Albums</a>
+                                </li>
+                                <li>
+                                    <a href="admin.php?c=comment">
+                                        <i class="fas fa-users"></i>Comments</a>
+                                </li>
+                                <li>
+                                    <a href="admin.php?c=category">
+                                        <i class="fas fa-users"></i>Categories</a>
+                                </li>
+                                <li>
+                                    <a href="admin.php?c=author">
+                                        <i class="fas fa-users"></i>Authors</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
                             <a class="js-arrow" href="admin.php?c=profile">
                                 <i class="fas fa-file-text"></i>Admin Profile
                             </a>
@@ -350,7 +404,7 @@
                                         <span class="au-breadcrumb-span">You are here:</span>
                                         <ul class="list-unstyled list-inline au-breadcrumb__list">
                                             <li class="list-inline-item active">
-                                                <a href="#">Home</a>
+                                                <a href="admin.php?c=home">Home</a>
                                             </li>
                                             <li class="list-inline-item seprate">
                                                 <span>/</span>
