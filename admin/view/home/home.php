@@ -8,65 +8,69 @@
     <div class="col-md-12">
         <div class="overview-wrap">
             <h2 class="title-1">overview</h2>
-            <button class="au-btn au-btn-icon au-btn--blue">
-                <i class="zmdi zmdi-plus"></i>add item</button>
         </div>
     </div>
 </div>
 <div class="row m-t-25">
     <div class="col-sm-12 col-lg-4">
-        <div class="overview-item overview-item--c1">
-            <div class="overview__inner">
-                <div class="overview-box clearfix">
-                    <div class="icon">
-                        <i class="zmdi zmdi-account-o"></i>
+        <a href="admin.php?c=user">
+            <div class="overview-item overview-item--c1">
+                <div class="overview__inner">
+                    <div class="overview-box clearfix">
+                        <div class="icon">
+                            <i class="zmdi zmdi-account-o"></i>
+                        </div>
+                        <div class="text">
+                            <h2><?php echo count($list_user)?></h2>
+                            <span>Users</span>
+                        </div>
                     </div>
-                    <div class="text">
-                        <h2>10368</h2>
-                        <span>members online</span>
+                    <div class="overview-chart">
+                        <canvas id="widgetChart1"></canvas>
                     </div>
-                </div>
-                <div class="overview-chart">
-                    <canvas id="widgetChart1"></canvas>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="col-sm-12 col-lg-4">
-        <div class="overview-item overview-item--c2">
-            <div class="overview__inner">
-                <div class="overview-box clearfix">
-                    <div class="icon">
-                        <i class="zmdi zmdi-shopping-cart"></i>
+        <a href="admin.php?c=song">
+            <div class="overview-item overview-item--c2">
+                <div class="overview__inner">
+                    <div class="overview-box clearfix">
+                        <div class="icon">
+                            <i class="zmdi zmdi-shopping-cart"></i>
+                        </div>
+                        <div class="text">
+                            <h2>1</h2>
+                            <span>Songs</span>
+                        </div>
                     </div>
-                    <div class="text">
-                        <h2>388,688</h2>
-                        <span>items solid</span>
+                    <div class="overview-chart">
+                        <canvas id="widgetChart2"></canvas>
                     </div>
-                </div>
-                <div class="overview-chart">
-                    <canvas id="widgetChart2"></canvas>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="col-sm-12 col-lg-4">
-        <div class="overview-item overview-item--c3">
-            <div class="overview__inner">
-                <div class="overview-box clearfix">
-                    <div class="icon">
-                        <i class="zmdi zmdi-calendar-note"></i>
+        <a href="admin.php?c=singer">
+            <div class="overview-item overview-item--c3">
+                <div class="overview__inner">
+                    <div class="overview-box clearfix">
+                        <div class="icon">
+                            <i class="zmdi zmdi-calendar-note"></i>
+                        </div>
+                        <div class="text">
+                            <h2>1,086</h2>
+                            <span>Singers</span>
+                        </div>
                     </div>
-                    <div class="text">
-                        <h2>1,086</h2>
-                        <span>this week</span>
+                    <div class="overview-chart">
+                        <canvas id="widgetChart3"></canvas>
                     </div>
-                </div>
-                <div class="overview-chart">
-                    <canvas id="widgetChart3"></canvas>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>
 
@@ -77,9 +81,9 @@
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <a href="admin.php?c=user">
+                        <a href="admin.php?c=album">
                             <h2 class="number"><?php echo count($list_user)?> </h2>
-                            <span class="desc">Users</span>
+                            <span class="desc">Albums</span>
                             <div class="icon">
                                 <i class="zmdi zmdi-account-o"></i>
                             </div>
@@ -88,9 +92,9 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <a href="admin.php?c=user">
+                        <a href="admin.php?c=author">
                             <h2 class="number"><?php echo count($list_user)?> </h2>
-                            <span class="desc">Users</span>
+                            <span class="desc">Authors</span>
                             <div class="icon">
                                 <i class="zmdi zmdi-account-o"></i>
                             </div>
@@ -99,9 +103,9 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <a href="admin.php?c=user">
+                        <a href="admin.php?c=category">
                             <h2 class="number"><?php echo count($list_user)?> </h2>
-                            <span class="desc">Users</span>
+                            <span class="desc">Categories</span>
                             <div class="icon">
                                 <i class="zmdi zmdi-account-o"></i>
                             </div>
@@ -110,9 +114,9 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <a href="admin.php?c=user">
+                        <a href="admin.php?c=commemt">
                             <h2 class="number"><?php echo count($list_user)?> </h2>
-                            <span class="desc">Users</span>
+                            <span class="desc">Comments</span>
                             <div class="icon">
                                 <i class="zmdi zmdi-account-o"></i>
                             </div>
@@ -123,9 +127,9 @@
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <a href="admin.php?c=user">
+                        <a href="admin.php?c=hear">
                             <h2 class="number"><?php echo count($list_user)?> </h2>
-                            <span class="desc">Users</span>
+                            <span class="desc">Hears</span>
                             <div class="icon">
                                 <i class="zmdi zmdi-account-o"></i>
                             </div>
@@ -134,9 +138,9 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <a href="admin.php?c=user">
+                        <a href="admin.php?c=like">
                             <h2 class="number"><?php echo count($list_user)?> </h2>
-                            <span class="desc">Users</span>
+                            <span class="desc">Likes</span>
                             <div class="icon">
                                 <i class="zmdi zmdi-account-o"></i>
                             </div>
@@ -145,9 +149,9 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <a href="admin.php?c=user">
+                        <a href="admin.php?c=playlistdetail">
                             <h2 class="number"><?php echo count($list_user)?> </h2>
-                            <span class="desc">Users</span>
+                            <span class="desc">Playlists Detail</span>
                             <div class="icon">
                                 <i class="zmdi zmdi-account-o"></i>
                             </div>
@@ -156,9 +160,9 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <a href="admin.php?c=user">
+                        <a href="admin.php?c=playlist">
                             <h2 class="number"><?php echo count($list_user)?> </h2>
-                            <span class="desc">Users</span>
+                            <span class="desc">Playlists</span>
                             <div class="icon">
                                 <i class="zmdi zmdi-account-o"></i>
                             </div>
