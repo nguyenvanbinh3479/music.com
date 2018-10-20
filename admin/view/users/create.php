@@ -47,13 +47,13 @@
 						<label>Email:</label>
 					</div>
 					<div class="row">   		
-						<input type="text" class="form-control p-2 m-2" name="email">
+						<input type="email" class="form-control p-2 m-2" name="email" required>
 					</div>
 					<div class="row">   		
 						<label>Password:</label>
 					</div>
 					<div class="row">   	
-						<input type="text" class="form-control p-2 m-2" name="password">
+						<input type="password" class="form-control p-2 m-2" name="password" required>
 					</div>
 					<div class="row">   		
 						<label>Role:</label>
@@ -74,9 +74,9 @@
 						</select>
 					</div>
 					<div class="row">   
-						<button class="btn btn-primary p-2 m-2" type="submit" onclick="alert('Create success !')">Apply</button>
+						<button class="btn btn-primary p-2 m-2" type="submit">Apply</button>
 					</div>
 					</form>
 				</div>
 			</div>
-<?php require_once(PATH_PUBLIC . '/template/admin/footer.php'); ?>
+<?php require_once(PATH_PUBLIC . '/template/admin/footer.php'); ?>	
