@@ -48,13 +48,13 @@
 							<label>Email:</label>
 						</div>
 						<div class="row">   		
-							<input type="text" class="form-control p-2 m-2" name="email" value="<?php echo $user->email; ?>">
+							<input type="text" class="form-control p-2 m-2" name="email" value="<?php echo $user->email; ?>" required>
 						</div>
 						<div class="row">   		
 							<label>Password:</label>
 						</div>
 						<div class="row">   	
-							<input type="text" class="form-control p-2 m-2" name="password" value="<?php echo $user->password; ?>">
+							<input type="text" class="form-control p-2 m-2" name="password" value="<?php echo $user->password; ?>" required>
 						</div>
 						<div class="row">   		
 							<label>Role:</label>
@@ -92,7 +92,7 @@
 							</select>
 						</div>
 						<div class="row">   
-							<button class="btn btn-success p-2 m-2" type="submit" onclick="alert('Edit success !')">Apply</button>                                             
+							<button class="btn btn-success p-2 m-2" type="submit">Apply</button>                                             
 						</div>
 					</form>
 				</div>
