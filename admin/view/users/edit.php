@@ -18,6 +18,10 @@
                                     <span>/</span>
                                 </li>
                                 <li class="list-inline-item"><a href="admin.php?c=user" style="color: #999;">User</a></li>
+								<li class="list-inline-item seprate">
+                                    <span>/</span>
+                                </li>
+                                <li class="list-inline-item"><a href="admin.php?c=user&a=edit&id=<?php echo $user->id?>" style="color: #999;">Edit User</a></li>
                             </ul>
                         </div>
                         <button class="au-btn au-btn-icon au-btn--green">

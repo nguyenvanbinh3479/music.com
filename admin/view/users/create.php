@@ -17,8 +17,12 @@
                                 <li class="list-inline-item seprate">
                                     <span>/</span>
                                 </li>
-                                <li class="list-inline-item"><a href="admin.php?c=user" style="color: #999;">User</a></li>
-                            </ul>
+                                <li class="list-inline-item"><a href="admin.php?c=user" style="color: #999;">User</a></li>                           
+                                <li class="list-inline-item seprate">
+                                    <span>/</span>
+                                </li>
+                                <li class="list-inline-item"><a href="admin.php?c=user&a=create" style="color: #999;">Create User</a></li>                           
+							</ul>
                         </div>
                         <button class="au-btn au-btn-icon au-btn--green">
                           <a href="admin.php?c=user" style="color: white;">User</a></button>
