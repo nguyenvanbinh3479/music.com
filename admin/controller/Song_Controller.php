@@ -9,15 +9,15 @@ class Song_Controller extends Base_Controller
     public function index()
     {        
         $this->model->load('Song');
-        // $this->model->load('Singer');
-        // $this->model->load('Album');
-        // $this->model->load('Category');
-        // $this->model->load('Author');
+        $this->model->load('Singer');
+        $this->model->load('Album');
+        $this->model->load('Category');
+        $this->model->load('Author');
         $list_song = $this->model->Song->all();
-        // $list_singer = $this->model->Singer->all();
-        // $list_album = $this->model->Album->all();
-        // $list_category = $this->model->Category->all();
-        // $list_author= $this->model->Author->all();
+        $list_singer = $this->model->Singer->all();
+        $list_album = $this->model->Album->all();
+        $list_category = $this->model->Category->all();
+        $list_author= $this->model->Author->all();
 
         $data = array(
             'title' => 'index',
@@ -84,10 +84,10 @@ class Song_Controller extends Base_Controller
     public function store()
     {        
         $this->model->load('Song');
-        // $this->model->BaiHat->singers_id = $_POST['singers_id'];
-        // $this->model->BaiHat->album_id = $_POST['album_id'];
-        // $this->model->BaiHat->categories_id = $_POST['categories_id'];
-        // $this->model->BaiHat->author_id = $_POST['author_id'];
+        $this->model->BaiHat->singers_id = $_POST['singers_id'];
+        $this->model->BaiHat->album_id = $_POST['album_id'];
+        $this->model->BaiHat->categories_id = $_POST['categories_id'];
+        $this->model->BaiHat->author_id = $_POST['author_id'];
         $this->model->BaiHat->ten = $_POST['ten'];
         $this->model->BaiHat->anh = $_POST['anh'];
         $this->model->BaiHat->loi = $_POST['loi'];
@@ -110,7 +110,7 @@ class Song_Controller extends Base_Controller
         $this->model->load('Category');
         $this->model->load('Author');
 
-        $song = $this->model->BaiHat->findById($_GET['id']);
+        $song = $this->model->Song->findById($_GET['id']);
         $list_album = $this->model->Album->all();
         $list_singer = $this->model->Singer->all();
         $list_category = $this->model->Category->all();

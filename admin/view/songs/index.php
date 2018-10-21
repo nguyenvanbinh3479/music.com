@@ -19,7 +19,7 @@
                                 <li class="list-inline-item seprate">
                                     <span>/</span>
                                 </li>
-                                <li class="list-inline-item"><a href="admin.php?c=user" style="color: #999;">User</a></li>
+                                <li class="list-inline-item"><a href="admin.php?c=song" style="color: #999;">Song</a></li>
                             </ul>
                         </div>
                         <button class="au-btn au-btn-icon au-btn--green">
@@ -112,7 +112,7 @@
                               $arr = (array) $list_singer;
                               foreach ($arr as $key => $value) {
                                   $singer = (array) $value;
-                                  if ($singer['id'] == $song->singer_id)   
+                                  if ($singer['id'] == $song->Singers_id)   
                                   echo '<td> '. $singer['ten'] .' </td>';
                               }
                           ?>
@@ -121,7 +121,7 @@
                               $arr = (array) $list_category;
                               foreach ($arr as $key => $value) {
                                   $category = (array) $value;
-                                  if ($category['id'] == $song->category_id)   
+                                  if ($category['id'] == $song->Categories_id)   
                                   echo '<td> '. $category['ten'] .' </td>';
                               }
                           ?>
@@ -130,7 +130,7 @@
                               $arr = (array) $list_author;
                               foreach ($arr as $key => $value) {
                                   $author = (array) $value;
-                                  if ($author['id'] == $song->author_id)   
+                                  if ($author['id'] == $song->Authors_id)   
                                   echo '<td> '. $author['ten'] .' </td>';
                               }
                           ?>
@@ -141,7 +141,7 @@
                               $arr = (array) $list_album;
                               foreach ($arr as $key => $value) {
                                   $album = (array) $value;
-                                  if ($album['id'] == $song->album_id)   
+                                  if ($album['id'] == $song->Albums_id)   
                                   echo '<td> '. $album['ten'] .' </td>';
                               }
                           ?>
