@@ -48,19 +48,19 @@
                             <h2>Create Singer</h2>
                         </div>
 						<div class="row">   		
-							<label>ten:</label>
+							<label>Ten:</label>
 						</div>
 						<div class="row">   		
 							<input type="text" class="form-control p-2 m-2" name="ten" required>
 						</div>
 						<div class="row">   		
-							<label>thong_tin:</label>
+							<label>Thong Tin:</label>
 						</div>
 						<div class="row">   		
 							<textarea class="form-control" name="thong_tin" required></textarea>
 						</div>
 						<div class="row">   		
-							<label>anh:</label>
+							<label>Anh:</label>
 						</div>
 						<div class="row">
                             <label class="btn btn-info btn-file">

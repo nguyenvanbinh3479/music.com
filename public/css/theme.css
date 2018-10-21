@@ -94,7 +94,10 @@ p {
 .btn {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    border-radius: 3px;
+    border-radius: 3px;    
+    width: 93px;
+    height: 40px;
+    margin: auto 0px;
 }
 
 /* ----- Typography ----- */

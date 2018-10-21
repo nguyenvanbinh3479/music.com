@@ -49,19 +49,19 @@
 							<h2>Edit Singer</h2>
 						</div>
 						<div class="row">   		
-							<label>ten:</label>
+							<label>Ten:</label>
 						</div>
 						<div class="row">   		
 							<input type="text" class="form-control p-2 m-2" name="ten" value="<?php echo $singer->ten; ?>">
 						</div>
 						<div class="row">   		
-							<label>thong tin:</label>
+							<label>Thong Tin:</label>
 						</div>
 						<div class="row">   	
                             <textarea class="form-control" rows="10" cols="10" class="form-control p-2 m-2" name="thong_tin"><?php echo $singer->thong_tin; ?></textarea>
 						</div>
 						<div class="row">   		
-							<label>anh:</label>
+							<label>Anh:</label>
 						</div>
                         <div class="row">
                             <label class="btn btn-info btn-file">

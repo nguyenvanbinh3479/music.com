@@ -87,8 +87,8 @@
                               </label>
                           </th>
                           <th>ID</th>
-                          <th>Category ID</th>
-                          <th>Singer ID</th>
+                          <th>Category</th>
+                          <th>Singer</th>
                           <th>Ten</th>
                           <th>Anh</th>
                           <th>ngay</th>
