@@ -70,7 +70,7 @@
                                         <i class="zmdi zmdi-shopping-cart"></i>
                                     </div>
                                     <div class="text">
-                                        <h2>1</h2>
+                                        <h2><?php echo count($list_song)?></h2>
                                         <span>Songs</span>
                                     </div>
                                 </div>

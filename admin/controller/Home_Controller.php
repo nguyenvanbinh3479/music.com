@@ -6,7 +6,7 @@ class Home_Controller extends Base_Controller
     public function index()
     {        
         // $this->model->load("Album");
-        // $this->model->load("BaiHat");
+        $this->model->load("Song");
         // $this->model->load("BinhLuan");
         // $this->model->load("CaSi");
         // $this->model->load("ChiTietPlayList");
@@ -17,7 +17,7 @@ class Home_Controller extends Base_Controller
         $this->model->load("User");
         // $this->model->load("YeuThich");
         // $list_album = $this->model->Album->all();
-        // $list_baihat = $this->model->BaiHat->all();
+        $list_song = $this->model->Song->all();
         // $list_binhluan = $this->model->BinhLuan->all();
         // $list_casi = $this->model->CaSi->all();
         // $list_chitietplaylist = $this->model->ChiTietPlayList->all();
@@ -31,7 +31,7 @@ class Home_Controller extends Base_Controller
         $data = array(
             'title' => 'home',
             // 'list_album' => $list_album,
-            // 'list_baihat' => $list_baihat,
+            'list_song' => $list_song,
             // 'list_binhluan' => $list_binhluan,
             // 'list_casi' => $list_casi,
             // 'list_chitietplaylist' => $list_chitietplaylist,
