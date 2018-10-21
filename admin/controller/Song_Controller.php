@@ -117,7 +117,7 @@ class Song_Controller extends Base_Controller
         $list_author= $this->model->Author->all();
         $data = array(
             'title' => 'edit',
-            'song' => $song,
+            'song' => $song,    
             'list_singer' => $list_singer,
             'list_album' => $list_album,
             'list_category' => $list_category,
