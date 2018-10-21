@@ -1,10 +1,10 @@
 <?php 
 class Song_Model{
 	public $id;
-	public $singer_id;
-	public $album_id;
-	public $category_id;
-	public $author_id;
+	public $singers_id;
+	public $albums_id;
+	public $categories_id;
+	public $authors_id;
 	public $ten;
 	public $anh;
 	public $loi;
@@ -23,10 +23,10 @@ class Song_Model{
 		while ($row = mysqli_fetch_assoc($result)){
 			$song = new Song_Model();
             $song->id = $row['id'];
-			$song->singer_id = $row['singer_id'];
-			$song->album_id = $row['album_id'];
-			$song->category_id = $row['category_id'];
-			$song->author_id = $row['author_id'];
+			$song->singers_id = $row['singers_id'];
+			$song->albums_id = $row['albums_id'];
+			$song->categories_id = $row['categories_id'];
+			$song->authors_id = $row['authors_id'];
             $song->ten = $row['ten'];
 			$song->anh = $row['anh'];
 			$song->loi = $row['loi'];
@@ -39,8 +39,8 @@ class Song_Model{
 
 	public function save(){
 		$conn = FT_Database::instance()->getConnection();
-		$stmt = $conn->prepare("INSERT INTO songs (song_id, album_id, categories_id, author_id, ten, anh, loi, link, ngay) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("iiiisssss", $this->song_id, $this->album_id, $this->category_id, $this->author_id, $this->ten, $this->anh, $this->loi, $this->link, $this->ngay);
+		$stmt = $conn->prepare("INSERT INTO songs (singers_id, albums_id, categories_id, authors_id, ten, anh, loi, link, ngay) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("iiiisssss", $this->singers_id, $this->albums_id, $this->categories_id, $this->authors_id, $this->ten, $this->anh, $this->loi, $this->link, $this->ngay);
 		$rs = $stmt->execute();
 		$this->id = $stmt->insert_id;		
 		$stmt->close();
@@ -58,10 +58,10 @@ class Song_Model{
 		$row = mysqli_fetch_assoc($result);
         $song = new Song_Model();
         $song->id = $row['id'];
-		$song->singer_id = $row['singer_id'];
-        $song->album_id = $row['album_id'];
-		$song->category_id = $row['category_id'];
-		$song->author_id = $row['author_id'];
+		$song->singers_id = $row['singers_id'];
+        $song->albums_id = $row['albums_id'];
+		$song->categories_id = $row['categories_id'];
+		$song->authors_id = $row['authors_id'];
         $song->ten = $row['ten'];
 		$song->anh = $row['anh'];
 		$song->loi = $row['loi'];
@@ -81,8 +81,8 @@ class Song_Model{
 
 	public function update(){
 		$conn = FT_Database::instance()->getConnection();
-		$stmt = $conn->prepare("UPDATE songs SET singer_id=?, album_id=?, categories_id=?, author_id=?, ten=?, anh=?, loi=?, link=?, ngay=? WHERE id=?");
-		$stmt->bind_param("iiiisssssi", $this->singer_id, $this->album_id, $this->category_id, $this->author_id, $this->ten, $this->anh, $this->loi, $this->link, $this->ngay, $_POST['id']);
+		$stmt = $conn->prepare("UPDATE songs SET singers_id=?, albums_id=?, categories_id=?, authors_id=?, ten=?, anh=?, loi=?, link=?, ngay=? WHERE id=?");
+		$stmt->bind_param("iiiisssssi", $this->singers_id, $this->albums_id, $this->categories_id, $this->authors_id, $this->ten, $this->anh, $this->loi, $this->link, $this->ngay, $_POST['id']);
 		$stmt->execute();
 		$stmt->close();
 	}
@@ -91,10 +91,7 @@ class Song_Model{
     public function topFiveMusic(){
     	$list_song = array();
      	$conn = FT_Database::instance()->getConnection(); 
-     	$sql = "SELECT songs.id,songs.ten as 'tenbaihat',  singers.ten as 'tencasi', songs.anh, 
-         songs.link from songs, hears, singers, authors WHERE songs.id = hears.song_id && songs.singer_id = 
-         singers.id && authors.id = songs.author_id GROUP BY hears.song_id 
-         ORDER BY COUNT(songs.id) DESC limit 5";
+     	$sql = "SELECT songs.id,songs.ten as 'tenbaihat',  singers.ten as 'tencasi', songs.anh, songs.link from songs, hears, singers, authors WHERE songs.id = hears.Song_id && songs.singers_id = singers.id && authors.id = songs.authors_id GROUP BY hears.Song_id ORDER BY COUNT(songs.id) DESC limit 5";
 
      	$result = mysqli_query($conn, $sql);
      	if(!$result)
@@ -105,7 +102,7 @@ class Song_Model{
 			$song = new Song_Model();
 	        $song->id = $row['id'];
 	        $song->ten = $row['tenbaihat'];
-			$song->casi_id = $row['tencasi'];
+			$song->singers_id = $row['tencasi'];
 			$song->anh = $row['anh'];
 			$song->link = $row['link'];
 			array_push($list_song, $song); 
@@ -118,7 +115,7 @@ class Song_Model{
     }
 
     public function newMusic(){
-    	$list_baihat = array();
+    	$list_song = array();
     	$conn = FT_Database::instance()->getConnection(); 
     	$sql = "";
     	
@@ -130,7 +127,7 @@ class Song_Model{
 			$song = new Song_Model();
 	        $song->id = $row['id'];
 	        $song->ten = $row['tenbaihat'];
-			$song->singer_id = $row['tencasi'];
+			$song->singers_id = $row['tencasi'];
 			$song->anh = $row['anh'];
 			$song->link = $row['link'];
 			$song->ngay = $row['ngay'];
@@ -139,13 +136,10 @@ class Song_Model{
         return $list_song;
     }
 
-    public function findSongsFromPlaylist($id){
+    public function findsongsFromPlaylist($id){
 		$conn = FT_Database::instance()->getConnection();
 
-		$sql ="SELECT songs.id, songs.ten, songs.anh, singers.ten as 'ten_casi', songs.link 
-        FROM songs, playlistsdetail, singers 
-        WHERE playlistsdetal.song_id = songs.id && 
-        songs.singer_id = singers.id && playlistsdetail.playlist_id = " . $id;
+		$sql ="SELECT songs.id, songs.ten, songs.anh, singers.ten as 'ten_casi', songs.link FROM songs, playlistsdetail, singers WHERE playlistsdetail.Song_id = songs.id && songs.singers_id = singers.id && playlistsdetail.playlist_id = " . $id;
 		
 		$result = mysqli_query($conn, $sql);
 		$songs = array();
@@ -158,7 +152,7 @@ class Song_Model{
 		    $song = new Song_Model();
 		    $song->id = $row['id'];
 		    $song->ten = $row['ten'];
-		    $song->singer_id = $row['ten_casi'];
+		    $song->singers_id = $row['ten_casi'];
 		    $song->anh = $row['anh'];
 		    $song->link = $row['link'];
 
@@ -173,11 +167,7 @@ class Song_Model{
 
 	public function InfoMusic($id){
 		$conn = FT_Database::instance()->getConnection();
-		$sql = "SELECT songs.id, songs.ten as 'ten_bai_hat', singers.ten as 'ten_ca_si', 
-        categories.ten as 'ten_the_loai', authors.ten as 'ten_tac_gia', songs.anh, 
-        songs.loi_bai_hat, songs.link, songs.ngay FROM songs, categories, authors, 
-        singers WHERE songs.singer_id = singers.id && songs.author_id = authors.id && 
-        songs.categorie_id = categories.id && songs.id = " . $id;
+		$sql = "SELECT songs.id, songs.ten as 'ten_bai_hat', singers.ten as 'ten_ca_si', categories.ten as 'ten_the_loai', authors.ten as 'ten_tac_gia', songs.anh, songs.loi, songs.link, songs.ngay FROM songs, categories, authors, singers WHERE songs.singers_id = singers.id && songs.authors_id = authors.id && songs.categories_id = categories.id && songs.id = " . $id;
 
 		$result = mysqli_query($conn, $sql);
 		$song = new Song_Model();
@@ -188,12 +178,12 @@ class Song_Model{
 		if ($result->num_rows > 0) {
 			$row = mysqli_fetch_assoc($result);
 			$song->id = $row['id'];
-			$song->singer_id = $row['ten_ca_si'];
-			$song->category_id = $row['ten_the_loai'];
-			$song->author_id = $row['ten_tac_gia'];
+			$song->singers_id = $row['ten_ca_si'];
+			$song->categories_id = $row['ten_the_loai'];
+			$song->authors_id = $row['ten_tac_gia'];
 			$song->ten = $row['ten_bai_hat'];
 			$song->anh = $row['anh'];
-			$song->loi = $row['loi_bai_hat'];
+			$song->loi = $row['loi'];
 			$song->link = $row['link'];
 			$song->ngay = $row['ngay'];
 
@@ -206,9 +196,7 @@ class Song_Model{
 
 	public function showBaiHatYeuThichFromID($id){
 		$conn = FT_Database::instance()->getConnection();
-		$sql = "SELECT songs.id, songs.ten, singers.ten as 'ten_ca_si', songs.anh, 
-        songs.link FROM songs, singers, likes WHERE songs.singer_id = singers.id && 
-        songs.id = likes.song_id && likes.user_id = " . $id;
+		$sql = "SELECT songs.id, songs.ten, singers.ten as 'ten_ca_si', songs.anh, songs.link FROM songs, singers, likes WHERE songs.singers_id = singers.id && songs.id = likes.Song_id && likes.user_id = " . $id;
 
 		$result = mysqli_query($conn, $sql);
 		$songs = array();
@@ -220,7 +208,7 @@ class Song_Model{
 		    $song = new Song_Model();
 		    $song->id = $row['id'];
 		    $song->ten = $row['ten'];
-		    $song->singer_id = $row['ten_ca_si'];
+		    $song->singers_id = $row['ten_ca_si'];
 		    $song->anh = $row['anh'];
 		    $song->link = $row['link'];
 
@@ -235,14 +223,13 @@ class Song_Model{
 
 	public function LuotNgheTuIDBaiHat($id){
 		$conn = FT_Database::instance()->getConnection();
-		$sql = "SELECT COUNT(hears.user_id) as 'hear' FROM hears 
-        WHERE hears.song_id = " . $id;
+		$sql = "SELECT COUNT(hears.user_id) as 'luotnghe' FROM hears WHERE hears.Song_id = " . $id;
 		$result = mysqli_query($conn, $sql);
 		if(!$result)
 			die('Error: ');
 		if ($result->num_rows > 0) {
 			$result = mysqli_fetch_assoc($result);
-			return $result['luotnghe'];
+			return $result['hear'];
 		}else {
 			return -1;
 		}
@@ -250,14 +237,13 @@ class Song_Model{
 
 	public function LuotThichTheoIDBaiHat($id){
 		$conn = FT_Database::instance()->getConnection();
-		$sql = "SELECT COUNT(likes.user_id) as 'luotthich' FROM likes 
-        WHERE likes.baihat_id = " . $id;
+		$sql = "SELECT COUNT(likes.user_id) as 'luotthich' FROM likes WHERE likes.Song_id = " . $id;
 		$result = mysqli_query($conn, $sql);
 		if(!$result)
 			die('Error: ');
 		if ($result->num_rows > 0) {
 			$result = mysqli_fetch_assoc($result);
-			return $result['luotthich'];
+			return $result['like'];
 		}else {
 			return -1;
 		}
@@ -273,7 +259,7 @@ class Song_Model{
 
 		if ($result->num_rows > 0) {
 			$result = mysqli_fetch_assoc($result);
-			return $result['loi_bai_hat'];	
+			return $result['loi'];	
 		}else {
 			return 0;
 		}
