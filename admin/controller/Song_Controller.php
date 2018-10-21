@@ -38,7 +38,7 @@ class Song_Controller extends Base_Controller
     public function show()
     {        
         $this->model->load('Song');
-        $song = $this->model->BaiHat->findById($_GET['id']);
+        $song = $this->model->Song->findById($_GET['id']);
         $data = array(
             'title' => 'show',
             'song' => $song
@@ -84,16 +84,16 @@ class Song_Controller extends Base_Controller
     public function store()
     {        
         $this->model->load('Song');
-        $this->model->BaiHat->singers_id = $_POST['singers_id'];
-        $this->model->BaiHat->album_id = $_POST['album_id'];
-        $this->model->BaiHat->categories_id = $_POST['categories_id'];
-        $this->model->BaiHat->author_id = $_POST['author_id'];
-        $this->model->BaiHat->ten = $_POST['ten'];
-        $this->model->BaiHat->anh = $_POST['anh'];
-        $this->model->BaiHat->loi = $_POST['loi'];
-        $this->model->BaiHat->link = $_POST['link'];
-        $this->model->BaiHat->ngay = $_POST['ngay'];
-        $this->model->BaiHat->save();
+        $this->model->Song->Singers_id = $_POST['Singers_id'];
+        $this->model->Song->Albums_id = $_POST['Albums_id'];
+        $this->model->Song->Categories_id = $_POST['Categories_id'];
+        $this->model->Song->Authors_id = $_POST['Authors_id'];
+        $this->model->Song->ten = $_POST['ten'];
+        $this->model->Song->anh = $_POST['anh'];
+        $this->model->Song->loi = $_POST['loi'];
+        $this->model->Song->link = $_POST['link'];
+        $this->model->Song->ngay = $_POST['ngay'];
+        $this->model->Song->save();
 
         go_back();
     }
@@ -135,11 +135,11 @@ class Song_Controller extends Base_Controller
     public function update()
     {        
         $this->model->load('Song');
-        $song = $this->model->BaiHat->findById($_POST['id']);
-        $song->singers_id = $_POST['singers_id'];
-        $song->album_id = $_POST['album_id'];
-        $song->categories_id = $_POST['categories_id'];
-        $song->author_id = $_POST['author_id'];
+        $song = $this->model->Song->findById($_POST['id']);
+        $song->Singers_id = $_POST['Singers_id'];
+        $song->Albums_id = $_POST['Albums_id'];
+        $song->Categories_id = $_POST['Categories_id'];
+        $song->Authors_id = $_POST['Authors_id'];
         $song->ten = $_POST['ten'];
         $song->anh = $_POST['anh'];
         $song->loi = $_POST['loi'];
@@ -157,7 +157,7 @@ class Song_Controller extends Base_Controller
     public function delete()
     {        
         $this->model->load('Song');
-        $song = $this->model->BaiHat->findById($_GET['id']);
+        $song = $this->model->Song->findById($_GET['id']);
         $song->delete();
 
         go_back();
