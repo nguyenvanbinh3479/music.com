@@ -49,7 +49,7 @@
 							<h2>Edit Album</h2>
 						</div>
 						<div class="row">   		
-							<label>anh:</label>
+							<label>Anh:</label>
 						</div>
 						<div class="row">
                             <label class="btn btn-warning btn-file">
@@ -64,13 +64,13 @@
                             <img id="output" style="width: 300px; height: 200px;" src="<?php echo $album->anh; ?>"/>
 						</div>
 						<div class="row">   		
-							<label>ten:</label>
+							<label>Ten:</label>
 						</div>
 						<div class="row">   	
 							<input type="text" class="form-control p-2 m-2" name="ten" value="<?php echo $album->ten; ?>">
 						</div>
 						<div class="row">   		
-							<label>casi:</label>
+							<label>Ca Si:</label>
 						</div>
 						<div class="row">   	
 							<select class="form-control p-2 m-2" name="Singers_id">
@@ -94,7 +94,7 @@
 							</select>
 						</div>
 						<div class="row">   		
-							<label>category:</label>
+							<label>Category:</label>
 						</div>
 						<div class="row">   	
 							<select class="form-control p-2 m-2" name="Categories_id">

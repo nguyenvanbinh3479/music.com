@@ -48,7 +48,7 @@
 						<h2>Create album</h2>
 					</div>
                         <div class="row">   		
-                            <label>anh:</label>
+                            <label>Anh:</label>
                         </div>
                         <div class="row">
                             <label class="btn btn-warning btn-file">
@@ -63,13 +63,13 @@
                             <img id="output" style="width: 300px; height: 200px;"/>
 						</div>
                         <div class="row">   		
-                            <label>ten:</label>
+                            <label>Ten:</label>
                         </div>
                         <div class="row">   	
                             <input type="text" class="form-control p-2 m-2" name="ten" required>
                         </div>
                         <div class="row">   		
-                            <label>Ca si:</label>
+                            <label>Ca Si:</label>
                         </div>
                         <div class="row">
                             <select class="form-control p-2 m-2" name="Singers_id">
@@ -89,7 +89,7 @@
                             </select>
                         </div>
 						<div class="row">   		
-							<label>ngay:</label>
+							<label>Ngay:</label>
 						</div>
 						<div class="row">   	
 							<input type="date" class="form-control p-2 m-2" name="ngay" required>
