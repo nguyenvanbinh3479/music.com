@@ -143,7 +143,7 @@
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <div class="statistic__item">
-                                    <a href="admin.php?c=commemt">
+                                    <a href="admin.php?c=comment">
                                         <h2 class="number"><?php echo count($list_user)?> </h2>
                                         <span class="desc">Comments</span>
                                         <div class="icon">
