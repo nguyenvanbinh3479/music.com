@@ -28,7 +28,7 @@ class Like_Controller extends Base_Controller
 
 
     /**
-    * action create: create a like
+    * action create: create a YeuThich
     * method: GET
     */
     public function create()
@@ -36,7 +36,7 @@ class Like_Controller extends Base_Controller
         $this->model->load('Song');
         $this->model->load('User');
         $this->model->load('Like');
-        $like = new Like_Model();
+        $loke = new Like_Model();
         $list_song = $this->model->Song->all();
         $list_user = $this->model->User->all();
 
@@ -58,7 +58,7 @@ class Like_Controller extends Base_Controller
     {        
        
         $this->model->load('Like');
-        if ($this->model->Like->check_Like_exists($_POST['Songs_id'], $_POST['Users_id']) == 0) {
+        if ($this->model->Like->check_yeuthich_exists($_POST['Songs_id'], $_POST['Users_id']) == 0) {
             $this->model->Like->Songs_id = $_POST['Songs_id'];
             $this->model->Like->Users_id = $_POST['Users_id'];
             $this->model->Like->ngay = $_POST['ngay'];
@@ -71,7 +71,7 @@ class Like_Controller extends Base_Controller
     }
 
     /**
-    * action edit: show form edit a like
+    * action edit: show form edit a YeuThich
     * method: GET
     */
     public function edit()
@@ -110,7 +110,7 @@ class Like_Controller extends Base_Controller
     }
 
     /**
-    * action delete: show form edit a like
+    * action delete: show form edit a YeuThich
     * method: GET
     */
     public function delete()

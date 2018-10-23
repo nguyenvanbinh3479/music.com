@@ -27,7 +27,7 @@ class Like_Model{
 
 	public function save(){
 	   $conn = FT_Database::instance()->getConnection();
-	    if ($this->check_Like_exists($this->Songs_id, $this->Users_id) == 0) {
+	    if ($this->check_yeuthich_exists($this->Songs_id, $this->Users_id) == 0) {
 	      $stmt = $conn->prepare("INSERT INTO likes (Songs_id, Users_id, ngay) VALUES (?, ?, ?)");
 	      $stmt->bind_param("iis", $this->Songs_id, $this->Users_id, $this->ngay);
 	      $rs = $stmt->execute();
@@ -40,7 +40,7 @@ class Like_Model{
 	}
 
 
-	public function check_Like_exists($Songs_id, $Users_id) {
+	public function check_yeuthich_exists($Songs_id, $Users_id) {
 	    $conn = FT_Database::instance()->getConnection();
 	    $stmt = $conn->prepare("SELECT * FROM likes WHERE Songs_id = ? AND Users_id = ?");
 	    $stmt->bind_param("ii", $Songs_id, $Users_id);
@@ -69,7 +69,7 @@ class Like_Model{
 
 	public function delete($Songs_id, $Users_id){
 		$conn = FT_Database::instance()->getConnection();
-		if ($this->check_Like_exists($this->Songs_id, $this->Users_id) > 0){
+		if ($this->check_yeuthich_exists($this->Songs_id, $this->Users_id) > 0){
 			$sql = 'delete from likes where Songs_id = '.$Songs_id.' AND Users_id = '.$Users_id;
 			mysqli_query($conn, $sql);
 
