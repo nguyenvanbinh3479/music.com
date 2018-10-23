@@ -32,16 +32,8 @@
 <div class="main-content">
     <div class="section__content section__content--p10">
         <div class="container-fluid">
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="overview-wrap">
-                        <h2 class="title-1">overview</h2>
-                    </div>
-                </div>
-            </div>
             <div class="row m-t-25">
-                <div class="col-sm-12 col-lg-4">
+                <div class="col-sm-6 col-lg-3">
                     <a href="admin.php?c=user">
                         <div class="overview-item overview-item--c1">
                             <div class="overview__inner">
@@ -61,7 +53,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-sm-12 col-lg-4">
+                <div class="col-sm-6 col-lg-3">
                     <a href="admin.php?c=song">
                         <div class="overview-item overview-item--c2">
                             <div class="overview__inner">
@@ -81,7 +73,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-sm-12 col-lg-4">
+                <div class="col-sm-6 col-lg-3">
                     <a href="admin.php?c=singer">
                         <div class="overview-item overview-item--c3">
                             <div class="overview__inner">
@@ -101,15 +93,35 @@
                         </div>
                     </a>
                 </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a href="admin.php?c=category">
+                        <div class="overview-item overview-item--c4">
+                            <div class="overview__inner">
+                                <div class="overview-box clearfix">
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-calendar-note"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h2>12345<?php //echo count($list_category)?></h2>
+                                        <span>Categories</span>
+                                    </div>
+                                </div>
+                                <div class="overview-chart">
+                                    <canvas id="widgetChart4"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <!-- STATISTIC-->
-            <section class="statistic">
+            <section class="statistic statistic2">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
+                                <div class="statistic__item statistic__item--green">
                                     <a href="admin.php?c=album">
                                         <h2 class="number"><?php echo count($list_user)?> </h2>
                                         <span class="desc">Albums</span>
@@ -120,7 +132,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
+                                <div class="statistic__item statistic__item--orange">
                                     <a href="admin.php?c=author">
                                         <h2 class="number"><?php echo count($list_user)?> </h2>
                                         <span class="desc">Authors</span>
@@ -131,10 +143,10 @@
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <a href="admin.php?c=category">
+                                <div class="statistic__item statistic__item--blue">
+                                    <a href="admin.php?c=playlist">
                                         <h2 class="number"><?php echo count($list_user)?> </h2>
-                                        <span class="desc">Categories</span>
+                                        <span class="desc">Playlists</span>
                                         <div class="icon">
                                             <i class="zmdi zmdi-account-o"></i>
                                         </div>
@@ -142,7 +154,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
+                                <div class="statistic__item statistic__item--red">
                                     <a href="admin.php?c=comment">
                                         <h2 class="number"><?php echo count($list_user)?> </h2>
                                         <span class="desc">Comments</span>
@@ -154,8 +166,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="statistic__item statistic__item--blue">
                                     <a href="admin.php?c=hear">
                                         <h2 class="number"><?php echo count($list_user)?> </h2>
                                         <span class="desc">Hears</span>
@@ -165,8 +177,8 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="statistic__item statistic__item--red">
                                     <a href="admin.php?c=like">
                                         <h2 class="number"><?php echo count($list_user)?> </h2>
                                         <span class="desc">Likes</span>
@@ -176,8 +188,8 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="statistic__item statistic__item--green">
                                     <a href="admin.php?c=playlistdetail">
                                         <h2 class="number"><?php echo count($list_user)?> </h2>
                                         <span class="desc">Playlists Detail</span>
@@ -187,7 +199,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
+                            <!-- <div class="col-md-6 col-lg-3">
                                 <div class="statistic__item">
                                     <a href="admin.php?c=playlist">
                                         <h2 class="number"><?php echo count($list_user)?> </h2>
@@ -197,7 +209,7 @@
                                         </div>
                                     </a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
