@@ -1,5 +1,5 @@
 <?php 
-class PlayListDetail_Model{
+class PlaylistDetail_Model{
     public $Playlists_id;
     public $Songs_id;
 
@@ -13,7 +13,7 @@ class PlayListDetail_Model{
 			die('Error: '.mysqli_query_error());
 
 		while ($row = mysqli_fetch_assoc($result)){
-            $playlistdetail = new PlayListDetail_Model();
+            $playlistdetail = new PlaylistDetail_Model();
             $playlistdetail->Playlists_id = $row['Playlists_id'];
             $playlistdetail->Songs_id = $row['Songs_id'];
             $list_playlistdetail[] = $playlistdetail;          

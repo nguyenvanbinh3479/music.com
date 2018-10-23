@@ -99,7 +99,6 @@
                                   <span class="au-checkmark"></span>
                               </label>
                           </td>
-                            <td><?php echo increment_once($index); ?></td>
                             <?php 
                                 $arr = (array) $list_playlist;
                                 foreach ($arr as $key => $value) {
@@ -113,7 +112,7 @@
                                 $arr = (array) $list_song;
                                 foreach ($arr as $key => $value) {
                                     $song = (array) $value;
-                                    if ($song['id'] == $chitietplaylist->Songs_id)   
+                                    if ($song['id'] == $playlistdetail->Songs_id)   
                                     echo '<td> '. $song['ten'] .' </td>';
                                 }
                             ?>  
