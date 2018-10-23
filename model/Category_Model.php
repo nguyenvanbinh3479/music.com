@@ -17,7 +17,7 @@ class Category_Model{
             $theloai = new Category_Model();
             $theloai->id = $row['id'];
             $theloai->ten = $row['ten'];
-            $theloai->anh = 'public/img/types/'.$row['anh'];
+            $theloai->anh = 'public/img/categories/'.$row['anh'];
             $list_category[] = $theloai;            
         }
 
@@ -46,7 +46,7 @@ class Category_Model{
         $theloai = new Category_Model();
         $theloai->id = $row['id'];
         $theloai->ten = $row['ten'];
-        $theloai->anh = 'public/img/types/'.$row['anh'];
+        $theloai->anh = 'public/img/categories/'.$row['anh'];
 
         return $theloai;
 	}

@@ -5,42 +5,42 @@ class Home_Controller extends Base_Controller
 
     public function index()
     {        
-        // $this->model->load("Album");
+        $this->model->load("Album");
         $this->model->load("Song");
-        // $this->model->load("BinhLuan");
-        // $this->model->load("CaSi");
-        // $this->model->load("ChiTietPlayList");
-        // $this->model->load("LuotNghe");
-        // $this->model->load("Playlist");
-        // $this->model->load("TacGia");
-        // $this->model->load("TheLoai");
+        $this->model->load("Comment");
+        $this->model->load("Singer");
+        $this->model->load("PlaylistDetail");
+        $this->model->load("Hear");
+        $this->model->load("Playlist");
+        $this->model->load("Author");
+        $this->model->load("Category");
         $this->model->load("User");
-        // $this->model->load("YeuThich");
-        // $list_album = $this->model->Album->all();
+        $this->model->load("Like");
+        $list_album = $this->model->Album->all();
         $list_song = $this->model->Song->all();
-        // $list_binhluan = $this->model->BinhLuan->all();
-        // $list_casi = $this->model->CaSi->all();
-        // $list_chitietplaylist = $this->model->ChiTietPlayList->all();
-        // $list_luotnghe = $this->model->LuotNghe->all();
-        // $list_playlist = $this->model->Playlist->all();
-        // $list_tacgia = $this->model->TacGia->all();
-        // $list_theloai = $this->model->TheLoai->all();
+        $list_comment = $this->model->Comment->all();
+        $list_singer = $this->model->Singer->all();
+        $list_playlistdetail = $this->model->PlaylistDetail->all();
+        $list_hear = $this->model->Hear->all();
+        $list_playlist = $this->model->Playlist->all();
+        $list_author = $this->model->Author->all();
+        $list_category = $this->model->Category->all();
         $list_user = $this->model->User->all();
-        // $list_yeuthich = $this->model->YeuThich->all();
+        $list_like = $this->model->Like->all();
 
         $data = array(
             'title' => 'home',
-            // 'list_album' => $list_album,
+            'list_album' => $list_album,
             'list_song' => $list_song,
-            // 'list_binhluan' => $list_binhluan,
-            // 'list_casi' => $list_casi,
-            // 'list_chitietplaylist' => $list_chitietplaylist,
-            // 'list_luotnghe' => $list_luotnghe,
-            // 'list_playlist' => $list_playlist,
-            // 'list_tacgia' => $list_tacgia,
-            // 'list_theloai' => $list_theloai,
+            'list_comment' => $list_comment,
+            'list_singer' => $list_singer,
+            'list_playlistdetail' => $list_playlistdetail,
+            'list_hear' => $list_hear,
+            'list_playlist' => $list_playlist,
+            'list_author' => $list_author,
+            'list_category' => $list_category,
             'list_user' => $list_user,
-            // 'list_yeuthich' => $list_yeuthich
+            'list_like' => $list_like
         );
 
         // Load view

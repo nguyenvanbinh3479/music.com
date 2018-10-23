@@ -90,7 +90,6 @@
                           <th>User</th>
                           <th>Ten</th>
                           <th>Anh</th>
-                          <th>Ngay</th>
                       </tr>
                   </thead>
                   <tbody>
