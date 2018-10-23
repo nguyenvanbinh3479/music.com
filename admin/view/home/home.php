@@ -39,7 +39,7 @@
                             <div class="overview__inner">
                                 <div class="overview-box clearfix">
                                     <div class="icon">
-                                        <i class="zmdi zmdi-account-o"></i>
+                                        <i class="fa fa-users"></i>
                                     </div>
                                     <div class="text">
                                         <h2><?php echo count($list_user)?></h2>
@@ -59,7 +59,7 @@
                             <div class="overview__inner">
                                 <div class="overview-box clearfix">
                                     <div class="icon">
-                                        <i class="zmdi zmdi-shopping-cart"></i>
+                                        <i class="fa fa-music"></i>
                                     </div>
                                     <div class="text">
                                         <h2><?php echo count($list_song)?></h2>
@@ -79,10 +79,10 @@
                             <div class="overview__inner">
                                 <div class="overview-box clearfix">
                                     <div class="icon">
-                                        <i class="zmdi zmdi-calendar-note"></i>
+                                        <i class="fa fa-bullhorn"></i>
                                     </div>
                                     <div class="text">
-                                        <h2>1,086</h2>
+                                        <h2><?php echo count($list_singer)?></h2>
                                         <span>Singers</span>
                                     </div>
                                 </div>
@@ -102,7 +102,7 @@
                                         <i class="zmdi zmdi-calendar-note"></i>
                                     </div>
                                     <div class="text">
-                                        <h2>12345<?php //echo count($list_category)?></h2>
+                                        <h2><?php echo count($list_category)?></h2>
                                         <span>Categories</span>
                                     </div>
                                 </div>
@@ -123,10 +123,10 @@
                             <div class="col-md-6 col-lg-3">
                                 <div class="statistic__item statistic__item--green">
                                     <a href="admin.php?c=album">
-                                        <h2 class="number"><?php echo count($list_user)?> </h2>
+                                        <h2 class="number"><?php echo count($list_album)?> </h2>
                                         <span class="desc">Albums</span>
                                         <div class="icon">
-                                            <i class="zmdi zmdi-account-o"></i>
+                                            <i class="zmdi zmdi-album"></i>
                                         </div>
                                     </a>
                                 </div>
@@ -134,10 +134,10 @@
                             <div class="col-md-6 col-lg-3">
                                 <div class="statistic__item statistic__item--orange">
                                     <a href="admin.php?c=author">
-                                        <h2 class="number"><?php echo count($list_user)?> </h2>
+                                        <h2 class="number"><?php echo count($list_author)?> </h2>
                                         <span class="desc">Authors</span>
                                         <div class="icon">
-                                            <i class="zmdi zmdi-account-o"></i>
+                                            <i class="zmdi zmdi-face"></i>
                                         </div>
                                     </a>
                                 </div>
@@ -145,10 +145,10 @@
                             <div class="col-md-6 col-lg-3">
                                 <div class="statistic__item statistic__item--blue">
                                     <a href="admin.php?c=playlist">
-                                        <h2 class="number"><?php echo count($list_user)?> </h2>
+                                        <h2 class="number"><?php echo count($list_playlist)?> </h2>
                                         <span class="desc">Playlists</span>
                                         <div class="icon">
-                                            <i class="zmdi zmdi-account-o"></i>
+                                            <i class="zmdi zmdi-playlist-plus"></i>
                                         </div>
                                     </a>
                                 </div>
@@ -156,10 +156,10 @@
                             <div class="col-md-6 col-lg-3">
                                 <div class="statistic__item statistic__item--red">
                                     <a href="admin.php?c=comment">
-                                        <h2 class="number"><?php echo count($list_user)?> </h2>
+                                        <h2 class="number"><?php echo count($list_comment)?> </h2>
                                         <span class="desc">Comments</span>
                                         <div class="icon">
-                                            <i class="zmdi zmdi-account-o"></i>
+                                            <i class="zmdi zmdi-comment-more"></i>
                                         </div>
                                     </a>
                                 </div>
@@ -169,10 +169,10 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="statistic__item statistic__item--blue">
                                     <a href="admin.php?c=hear">
-                                        <h2 class="number"><?php echo count($list_user)?> </h2>
+                                        <h2 class="number"><?php echo count($list_hear)?> </h2>
                                         <span class="desc">Hears</span>
                                         <div class="icon">
-                                            <i class="zmdi zmdi-account-o"></i>
+                                            <i class="zmdi zmdi-hearing"></i>
                                         </div>
                                     </a>
                                 </div>
@@ -180,10 +180,10 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="statistic__item statistic__item--red">
                                     <a href="admin.php?c=like">
-                                        <h2 class="number"><?php echo count($list_user)?> </h2>
+                                        <h2 class="number"><?php echo count($list_like)?> </h2>
                                         <span class="desc">Likes</span>
                                         <div class="icon">
-                                            <i class="zmdi zmdi-account-o"></i>
+                                            <i class="zmdi zmdi-label-heart"></i>
                                         </div>
                                     </a>
                                 </div>
@@ -191,25 +191,14 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="statistic__item statistic__item--green">
                                     <a href="admin.php?c=playlistdetail">
-                                        <h2 class="number"><?php echo count($list_user)?> </h2>
+                                        <h2 class="number"><?php echo count($list_playlistdetail)?> </h2>
                                         <span class="desc">Playlists Detail</span>
                                         <div class="icon">
-                                            <i class="zmdi zmdi-account-o"></i>
+                                            <i class="zmdi zmdi-playlist-audio"></i>
                                         </div>
                                     </a>
                                 </div>
                             </div>
-                            <!-- <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <a href="admin.php?c=playlist">
-                                        <h2 class="number"><?php echo count($list_user)?> </h2>
-                                        <span class="desc">Playlists</span>
-                                        <div class="icon">
-                                            <i class="zmdi zmdi-account-o"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>

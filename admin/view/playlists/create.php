@@ -68,7 +68,7 @@
 							<label>Anh:</label>
 						</div>
 						<div class="row">
-                            <label class="btn btn-default btn-file">
+                            <label class="btn btn-success btn-file">
                                 Browse <input type="file" accept="image/*" name="anh" style="display: none;" onchange="loadFile(event)">
                                 <script>
                                 var loadFile = function(event) {
