@@ -17,15 +17,15 @@
                                 <li class="list-inline-item seprate">
                                     <span>/</span>
                                 </li>
-                                <li class="list-inline-item"><a href="admin.php?c=user" style="color: #999;">User</a></li>
+                                <li class="list-inline-item"><a href="admin.php?c=playlistdetail" style="color: #999;">Playlist Detail</a></li>
 								<li class="list-inline-item seprate">
                                     <span>/</span>
                                 </li>
-                                <li class="list-inline-item"><a href="admin.php?c=user&a=edit&id=<?php echo $user->id?>" style="color: #999;">Edit User</a></li>
+                                <li class="list-inline-item"><a href="admin.php?c=playlistdetail&a=edit&id=<?php echo $playlistdetail->id?>" style="color: #999;">Edit Playlist Detail</a></li>
                             </ul>
                         </div>
                         <button class="au-btn au-btn-icon au-btn--green">
-                          <a href="admin.php?c=user" style="color: white;">User</a></button>
+                          <a href="admin.php?c=playlistdetail" style="color: white;">Playlist Detail</a></button>
                     </div>
                 </div>
             </div>
@@ -42,57 +42,56 @@
 			<div id="wrapper">
 				<div class="container">
 					<form method="post" action="admin.php">
-						<input type="hidden" name="id" value="<?php echo $user->id; ?>">
-						<input type="hidden" name="c" value="user">
+						<input type="hidden" name="id" value="<?php echo $playlistdetail->id; ?>">
+						<input type="hidden" name="c" value="playlistdetail">
 						<input type="hidden" name="a" value="update">
 						<div class="row">   		
-							<h2>Edit user</h2>
+							<h2>Edit Playlist Detail</h2>
 						</div>
 						<div class="row">   		
-							<label>Email:</label>
-						</div>
-						<div class="row">   		
-							<input type="text" class="form-control p-2 m-2" name="email" value="<?php echo $user->email; ?>" required>
-						</div>
-						<div class="row">   		
-							<label>Password:</label>
-						</div>
-						<div class="row">   	
-							<input type="text" class="form-control p-2 m-2" name="password" value="<?php echo $user->password; ?>" required>
-						</div>
-						<div class="row">   		
-							<label>Role:</label>
+							<label>Playlist:</label>
 						</div>
 						<div class="row">
-							<select class="form-control p-2 m-2" name="role">
-								<?php 
-									$role = $user->role;
-									if ($role == "admin") {
-										echo "<option value='$role' selected>admin</option>";
-										echo "<option value='user'>user</option>";
-									}else {
-										echo "<option value='$role' selected>user</option>";
-										echo "<option value='admin'>admin</option>";
-									}
-								?>
+							<select class="form-control p-2 m-2" name="Playlists_id">
+                                <?php
+                                foreach ($list_playlist as $value)
+                                {
+                                    $playlist = (array) $value;
+                                    $id = $playlist['id'];
+                                    $Playlists_id = $playlistdetail->Playlists_id;
+                                    $name = $playlist['ten'];
+                                    if ($Playlists_id == $id) {
+                                        echo "<option value='$id' selected>$name
+                                        </option>";
+                                    }else {
+                                        echo "<option value='$id'> $name
+                                        </option>";
+                                    }
+                                }      
+                                ?> 
 							</select>
 						</div>
 						<div class="row">   		
-							<label>Status:</label>
+							<label>Bai Hat:</label>
 						</div>
 						<div class="row">
-							<select class="form-control p-2 m-2" name="status">
-								<?php 
-									$status = $user->status;
-									$visible = "visible";
-									if ($status == "visible") {
-										echo "<option value='$status' selected>visible</option>";
-										echo "<option value='disable'>disable</option>";
-									}else {
-										echo "<option value='$status' selected>disable</option>";
-										echo "<option value='$visible'>visible</option>";
-									}
-								?>
+							<select class="form-control p-2 m-2" name="Songs_id">
+                                <?php
+                                foreach ($list_song as $value)
+                                {
+                                    $song = (array) $value;
+                                    $id = $song['id'];
+                                    $Songs_id = $playlistdetail->Songs_id;
+                                    $name = $song['ten'];
+                                    if ($Songs_id == $id) {
+                                        echo "<option value='$id' selected>$name
+                                        </option>";
+                                    }else {
+                                        echo "<option value='$id'> $name
+                                        </option>";
+                                    }
+                                }       
+                                ?> 
 							</select>
 						</div>
 						<div class="row">   
