@@ -6,7 +6,6 @@ class Like_Controller extends Base_Controller
     * action index: show all likes
     * method: GET
     */
-
     public function index()
     {        
         $this->model->load('Like');
@@ -26,6 +25,22 @@ class Like_Controller extends Base_Controller
         $this->view->load('likes/index', $data);
     }
 
+    /**
+    * action show: show a like
+    * method: GET
+    */
+    public function show()
+    {        
+        $this->model->load('Like');
+        $like = $this->model->Like->findById($_GET['id']);
+        $data = array(
+            'title' => 'show',
+            'like' => $like     
+        );
+
+        // Load view
+        $this->view->load('likes/show', $data);
+    }
 
     /**
     * action create: create a like
@@ -35,19 +50,16 @@ class Like_Controller extends Base_Controller
     {        
         $this->model->load('Song');
         $this->model->load('User');
-        $this->model->load('Like');
-        $like = new Like_Model();
+
         $list_song = $this->model->Song->all();
-        $list_user = $this->model->User->all();
+        $list_user = $this->model->User->all(); 
 
         $data = array(
-            'show' => $like->show,
+            'title' => 'index',
             'list_song' => $list_song,
-            'list_user' => $list_user,
+            'list_user' => $list_user            
         );
-
         $this->view->load('likes/create',$data);
-
     }
 
      /**
@@ -56,18 +68,14 @@ class Like_Controller extends Base_Controller
     */
     public function store()
     {        
-       
         $this->model->load('Like');
-        if ($this->model->Like->check_Like_exists($_POST['Songs_id'], $_POST['Users_id']) == 0) {
-            $this->model->Like->Songs_id = $_POST['Songs_id'];
-            $this->model->Like->Users_id = $_POST['Users_id'];
-            $this->model->Like->ngay = $_POST['ngay'];
-            $this->model->Like->save();
-            go_back();
-        }else {
-           
-        }
+        $this->model->Like->Users_id = $_POST['Users_id'];
+        $this->model->Like->Songs_id = $_POST['Songs_id'];
+        $this->model->Like->ngay = $_POST['ngay'];
+        
+        $this->model->Like->save();
 
+        go_back();
     }
 
     /**
@@ -79,14 +87,16 @@ class Like_Controller extends Base_Controller
         $this->model->load('Like');
         $this->model->load('Song');
         $this->model->load('User');
-        $like = $this->model->Like->find($_GET['Songs_id'], $_GET['Users_id']);
+
+        $like = $this->model->Like->findById($_GET['id']);
         $list_song = $this->model->Song->all();
-        $list_user = $this->model->User->all();
+        $list_user = $this->model->User->all(); 
+
         $data = array(
             'title' => 'edit',
             'like' => $like,
             'list_song' => $list_song,
-            'list_user' => $list_user
+            'list_user' => $list_user  
         );
 
         // Load view
@@ -99,24 +109,46 @@ class Like_Controller extends Base_Controller
     */
     public function update()
     {        
+
         $this->model->load('Like');
-        $like = $this->model->Like->find($_POST['Songs_id'], $_POST['Users_id']);
-        $like->Songs_id = $_POST['Songs_id'];
-        $like->Users_id = $_POST['Users_id'];          
-        $like->ngay = $_POST['ngay'];          
+        $like = $this->model->Like->findById($_POST['id']);
+        $like->Users_id = $_POST['Users_id'];
+        $like->Songs_id = $_POST['Songs_id'];        
+        $like->ngay = $_POST['ngay'];        
         $like->update();
 
         go_back();
     }
 
+    public function check_exist() {
+        $conn = FT_Database::instance()->getConnection();
+        $stmt = $conn->prepare("SELECT * FROM likes WHERE Users_id = ? AND Songs_id = ? AND ngay= ?");
+
+        $stmt->bind_param("iis", $Users_id, $Songs_id, $ngay);
+
+        $stmt->execute();
+        $stmt->bind_result($id);
+        $stmt->store_result();
+        /*Fetch the value*/
+        $stmt->fetch();
+
+        if ($stmt->num_rows > 0) {
+        return $stmt->num_rows;
+        } else {
+        return 0;
+        }
+    }   
+
+
     /**
     * action delete: show form edit a like
     * method: GET
     */
-    public function delete()
-    {        
+    public function delete() {        
         $this->model->load('Like');
-        $this->model->Like->delete($_GET['Songs_id'], $_GET['Users_id']);
+        // die($_GET['Users_id']);
+        $this->model->Like->delete($_GET['Users_id'], $_GET['Songs_id']);
+
         go_back();
     }
 }
