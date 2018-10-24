@@ -1,6 +1,6 @@
 <?php if ( ! defined('PATH_SYSTEM')) die ('Bad requested!');
 
-class PlayListDetail_Controller extends Base_Controller
+class PlaylistDetail_Controller extends Base_Controller
 {
     /**
     * action index: show all playlistsdetail
@@ -8,10 +8,10 @@ class PlayListDetail_Controller extends Base_Controller
     */
     public function index()
     {        
-        $this->model->load('PlayListDetail');
+        $this->model->load('PlaylistDetail');
         $this->model->load('Song');
         $this->model->load('PlayList');
-        $list_playlistdetail = $this->model->PlayListDetail->all();
+        $list_playlistdetail = $this->model->PlaylistDetail->all();
         $list_song = $this->model->Song->all();
         $list_playlist = $this->model->PlayList->all();
         $data = array(
@@ -31,8 +31,8 @@ class PlayListDetail_Controller extends Base_Controller
     */
     public function show()
     {        
-        $this->model->load('PlayListDetail');
-        $playlistdetail = $this->model->PlayListDetail->findById($_GET['id']);
+        $this->model->load('PlaylistDetail');
+        $playlistdetail = $this->model->PlaylistDetail->findById($_GET['id']);
         $data = array(
             'title' => 'show',
             'playlistdetail' => $playlistdetail     
@@ -68,11 +68,11 @@ class PlayListDetail_Controller extends Base_Controller
     */
     public function store()
     {        
-        $this->model->load('PlayListDetail');
-        $this->model->PlayListDetail->Playlists_id = $_POST['Playlists_id'];
-        $this->model->PlayListDetail->Songs_id = $_POST['Songs_id'];
+        $this->model->load('PlaylistDetail');
+        $this->model->PlaylistDetail->Playlists_id = $_POST['Playlists_id'];
+        $this->model->PlaylistDetail->Songs_id = $_POST['Songs_id'];
         
-        $this->model->PlayListDetail->save();
+        $this->model->PlaylistDetail->save();
 
         go_back();
     }
@@ -83,11 +83,11 @@ class PlayListDetail_Controller extends Base_Controller
     */
     public function edit()
     {        
-        $this->model->load('PlayListDetail');
+        $this->model->load('PlaylistDetail');
         $this->model->load('Song');
         $this->model->load('PlayList');
 
-        $playlistdetail = $this->model->PlayListDetail->findById($_GET['id']);
+        $playlistdetail = $this->model->PlaylistDetail->findById($_GET['id']);
         $list_song = $this->model->Song->all();
         $list_playlist = $this->model->PlayList->all(); 
 
@@ -109,8 +109,8 @@ class PlayListDetail_Controller extends Base_Controller
     public function update()
     {        
 
-        $this->model->load('PlayListDetail');
-        $playlistdetail = $this->model->PlayListDetail->findById($_POST['id']);
+        $this->model->load('PlaylistDetail');
+        $playlistdetail = $this->model->PlaylistDetail->findById($_POST['id']);
         $playlistdetail->Playlists_id = $_POST['Playlists_id'];
         $playlistdetail->Songs_id = $_POST['Songs_id'];        
         $playlistdetail->update();
@@ -143,9 +143,9 @@ class PlayListDetail_Controller extends Base_Controller
     * method: GET
     */
     public function delete() {        
-        $this->model->load('PlayListDetail');
+        $this->model->load('PlaylistDetail');
         // die($_GET['Playlists_id']);
-        $this->model->PlayListDetail->delete($_GET['Playlists_id'], $_GET['Songs_id']);
+        $this->model->PlaylistDetail->delete($_GET['Playlists_id'], $_GET['Songs_id']);
 
         go_back();
     }

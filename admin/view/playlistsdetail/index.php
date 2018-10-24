@@ -99,7 +99,6 @@
                                   <span class="au-checkmark"></span>
                               </label>
                           </td>
-                            <td><?php echo increment_once($index); ?></td>
                             <?php 
                                 $arr = (array) $list_playlist;
                                 foreach ($arr as $key => $value) {
@@ -113,19 +112,14 @@
                                 $arr = (array) $list_song;
                                 foreach ($arr as $key => $value) {
                                     $song = (array) $value;
-                                    if ($song['id'] == $chitietplaylist->Songs_id)   
+                                    if ($song['id'] == $playlistdetail->Songs_id)   
                                     echo '<td> '. $song['ten'] .' </td>';
                                 }
                             ?>  
                           <td>
                               <div class="table-data-feature">
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                  <a href="admin.php?c=playlistdetail&a=edit&id=<?php echo $playlistdetail->id; ?>">
-                                    <i class="zmdi zmdi-edit"></i>
-                                  </a>
-                                </button>
                                 <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                  <a href="admin.php?c=playlistdetail&a=delete&id=<?php echo $playlistdetail->id; ?>">
+                                  <a href="admin.php?c=playlistdetail&a=delete&Playlists_id=<?php echo $playlistdetail->Playlists_id; ?>&Songs_id=<?php echo $playlistdetail->Songs_id;?>">
                                     <i class="zmdi zmdi-delete"></i>
                                   </a>
                                 </button>
