@@ -86,6 +86,7 @@
                                   <span class="au-checkmark"></span>
                               </label>
                           </th>
+                          <th>ID</th>
                           <th>User</th>
                           <th>Song</th>
                           <th>Ngay</th>
@@ -120,13 +121,8 @@
                                 <td><?php $date = date_create($like->ngay); echo date_format($date, "d/m/Y"); ?></td>
                           <td>
                               <div class="table-data-feature">
-                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                  <a href="admin.php?c=like&a=edit&id=<?php echo $like->id; ?>">
-                                    <i class="zmdi zmdi-edit"></i>
-                                  </a>
-                                </button>
                                 <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                  <a href="admin.php?c=like&a=delete&id=<?php echo $like->id; ?>">
+                                  <a href="admin.php?c=like&a=delete&Songs_id=<?php echo $like->Songs_id; ?>&Users_id=<?php echo $like->Users_id;?>">
                                     <i class="zmdi zmdi-delete"></i>
                                   </a>
                                 </button>
