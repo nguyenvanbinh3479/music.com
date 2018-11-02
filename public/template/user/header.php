@@ -33,7 +33,7 @@
 
     <!-- Main CSS-->
     <link href="public/css/themes.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/styles.css">
 
 </head>
 <body>
@@ -50,11 +50,22 @@
                 <div class="group">
                     <a href="index.php"><i class="fa fa-home"></i></a>
                     <a href="index.php"><i class="fa fa-search"></i></a>
-                    <a href="index.php"><i class="fa fa-user"></i></a>
-                    <a href="index.php" onclick="dropdown()">User<i class="fa fa-angle-down"></i></a>
+                    <a href="index.php" class="drop"><i class="fa fa-user"></i> User</i></a>
+                    <div class="dropdow">
+                        <ul class="user">
+                            <li>Logout</li>
+                            <hr>
+                            <li>Hear</li>
+                            <hr>
+                            <li>Playlist</li>
+                            <hr>
+                            <li>Like</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
 </div>
+<?php

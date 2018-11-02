@@ -32,7 +32,7 @@
     <link href="public/css/jqvmap.min.css" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="public/css/theme.css" rel="stylesheet" media="all">
+    <link href="public/css/themes.css" rel="stylesheet" media="all">
 
 </head>
 

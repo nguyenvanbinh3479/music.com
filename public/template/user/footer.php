@@ -13,6 +13,10 @@
     </div>
 </div>
 
+
+<script>
+    
+</script>
     <!-- Jquery JS-->
     <script src="public/js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap JS-->
@@ -40,6 +44,7 @@
 
     <!-- Main JS-->
     <script src="public/js/main.js"></script>
+    <script src="public/js/index.js"></script>
 
 </body>
 
