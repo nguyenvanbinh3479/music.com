@@ -1,0 +1,70 @@
+body{
+    background: url(../img/background.jpg) no-repeat;
+    /* background-size: 100% 100%; */
+}
+a{
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+
+}
+hr{
+    margin: 0;
+}
+a:hover{
+    color: rgb(79, 134, 41);
+    text-decoration: none;
+}
+i{
+    font-size: 30px !important;
+    padding: 20px;
+}
+.container-fluid{
+    max-width: 100%;
+    padding: 15px;
+    margin: 0;
+}
+.row{
+    max-width: 100%;
+    padding: 15px;
+    margin: 0;
+    overflow: hidden;
+}
+.logo{
+    max-width: 80px;
+}
+.logo img{
+    border-radius: 40px;
+    max-width: 100%;
+}
+.group{
+    float: right;
+}
+.dropdow{
+    overflow: hidden;
+    width: 179px;
+    float: left;
+    position: absolute;
+    top: 90px;
+    left: -179px;
+}
+.show{
+    left: 0;
+    transition: 3s;
+    border: 1px solid silver;
+    border-radius: 0px 10px 10px 0px;
+    z-index: 2;
+    background: rgba(150, 150, 150, 0.501);
+    position: fixed
+}
+.dropdow ul{
+    background: rgba(255, 255, 255, 0.486);
+    list-style-type: none;
+    padding: 10px;
+}
+.dropdow ul li{
+    padding: 10px 5px;
+    text-align: center;
+}
+.dropdow ul li:hover{
+    background: rgba(80, 134, 41, 0.507);
+}
