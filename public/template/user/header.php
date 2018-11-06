@@ -33,35 +33,31 @@
 
     <!-- Main CSS-->
     <link href="public/css/themes.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="public/css/style.css">
 
 </head>
 <body>
 <div class="container-fluid">
     <header>
         <div class="row">
-            <div class="col-5">
+            <div class="col-3">
                 <div class="logo">
                     <a href="index.php">
-                    <img src="../../public/img/admin.jpg" alt=""></a>
+                    <img src="../../public/img/admin/logo.png" alt=""></a>
                 </div>
             </div>
-            <div class="col-7">
-                <div class="group">
-                    <a href="index.php"><i class="fa fa-home"></i></a>
-                    <a href="index.php"><i class="fa fa-search"></i></a>
-                    <a href="index.php" class="drop"><i class="fa fa-user"></i> User</i></a>
-                    <div class="dropdow">
-                        <ul class="user">
-                            <li>Logout</li>
-                            <hr>
-                            <li>Hear</li>
-                            <hr>
-                            <li>Playlist</li>
-                            <hr>
-                            <li>Like</li>
-                        </ul>
-                    </div>
+            <div class="col-9">
+                <div class="menu">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Category</a></li>
+                        <li><a href="">Archive</a></li>
+                        <li><a href="">Pages</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <button></button>
                 </div>
             </div>
         </div>
