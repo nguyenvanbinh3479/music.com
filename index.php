@@ -2,8 +2,8 @@
 <html lang="en-US">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="icon" type="image/png" href="public/img/icons/logo.png">
-        <link rel="stylesheet" href="public/css/styles.css">
+        <link rel="icon" type="image/png" href="public/img/icons/icon_logo.png">
+        <link rel="stylesheet" href="public/css/style.css">
         <meta http-equiv="Content-Language" content="vi">
         <meta http-equiv="X-UA-Compatible" content="requiresActiveX=true">     
 		<link rel="stylesheet" href="public/css/bootstrap.min.css">
@@ -17,10 +17,10 @@
         <div class="box-header" id="header">
             <div class="wrap">
                 <div class="content-wrap">
-                    <a class="logo" href="index.html"></a>
+                    <a class="logo" href="index.php"></a>
                     <div class="menu-subdomain">
-                        <a href="index.html" class="active">MUSIC</a>
-                        <a href="videos.html" target="_blank">VIDEO</a>
+                        <a href="index.php" class="active">MUSIC</a>
+                        <a href="video.php" target="_blank">VIDEO</a>
                     </div>
                       <div id="box_search_quick" class="box_search">
                         <div class="bg-top-noel"></div>
@@ -65,19 +65,19 @@
                     <div class="menu-top">
                         <ul class="notifi" id="menuTop">
                             <li class="icon_logo_menu" id="icon_menu_logo">
-                                <a href="index.html" title="Home" class="active">Home</a>
+                                <a href="index.php" title="Home" class="active">Home</a>
                             </li>
                             
                             <li>                                
-                                <a href="songs.html" title="Songs">Songs</a>
+                                <a href="songs.php" title="Songs">Songs</a>
                             </li>
                             
                             <li>
-                                <a rel="follow" href="genres.html" title="Genres">Genres</a>
+                                <a rel="follow" href="genres.php" title="Genres">Genres</a>
                             </li>
                             
                             <li>
-                                <a rel="follow" href="singers.html" title="Singer">Singers</a>
+                                <a rel="follow" href="singers.php" title="Singer">Singers</a>
                             </li>
                         </ul>
                     </div>
@@ -105,7 +105,7 @@
                                     </ol>
                                     <div class="carousel-inner" role="listbox">
                                         <div class="carousel-item active">
-                                            <a href="Koni---No-Other.html">
+                                            <a href="Koni---No-Other.php">
                                                 <img class="d-block img-fluid" src="public/img/slider/Koni---No-Other.jpg" alt="First slide">
                                                 <div class="carousel-caption d-none d-md-block">
                                                     <h3>Koni</h3>
@@ -113,7 +113,7 @@
                                             </a>
                                         </div>
                                         <div class="carousel-item">
-                                            <a href="Culture Code_Make Me Move V2.html">									
+                                            <a href="Culture Code_Make Me Move V2.php">									
                                                 <img class="d-block img-fluid" src="public/img/slider/Culture-Code_Make-Me-Move-V2.jpg" alt="Second slide">
                                                 <div class="carousel-caption d-none d-md-block">
                                                     <h3>Culture Code</h3>
@@ -121,7 +121,7 @@
                                             </a>
                                         </div>
                                         <div class="carousel-item">
-                                            <a href="Hailee-Steinfeld,-Alesso---Let-Me-Go.html">
+                                            <a href="Hailee-Steinfeld,-Alesso---Let-Me-Go.php">
                                                 <img class="d-block img-fluid" src="public/img/slider/Hailee-Steinfeld,-Alesso_Let-Me-Go.jpg" alt="Third slide">
                                                 <div class="carousel-caption d-none d-md-block">
                                                     <h3>Hailee Steinfeld, Alesso</h3>
@@ -129,7 +129,7 @@
                                             </a>
                                         </div>
                                         <div class="carousel-item">
-                                            <a href="Ina Wroldsen_Strongest (Alan Walker_ Remix).html">
+                                            <a href="Ina Wroldsen_Strongest (Alan Walker_ Remix).php">
                                                 <img class="d-block img-fluid" src="public/img/slider/Ina-Wroldsen---Strongest-(Alan-Walker-Remix).jpg" alt="Four slide">
                                                 <div class="carousel-caption d-none d-md-block">
                                                     <h3>Ina Wroldsen (Alan Walker Remix)</h3>
@@ -137,7 +137,7 @@
                                             </a>
                                         </div>
                                         <div class="carousel-item">
-                                            <a href="Next-To-Me---Axel-Johansson-Tina-Stachowiak.html">
+                                            <a href="Next-To-Me---Axel-Johansson-Tina-Stachowiak.php">
                                                 <img class="d-block img-fluid" src="public/img/slider/Next-To-Me---Axel-Johansson-Tina-Stachowiak.jpg" alt="Four slide">
                                                 <div class="carousel-caption d-none d-md-block">
                                                     <h3>Axel Johansson - Tina Stachowiak</h3>
@@ -160,7 +160,7 @@
                         <div class="list_video">
                             <div class="fram_select">
                                 <div class="tile_box_key">
-                                    <h2><a title="Videos" href="video.html">Videos</a></h2>                    
+                                    <h2><a title="Videos" href="video.php">Videos</a></h2>                    
                                 </div>
                                 <ul>
                                     <li class="videolarge">
@@ -170,13 +170,13 @@
                                                 <div class="box_absolute">
                                                     <span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_5495615" wgct="1">103</span></span>
                                                     <span class="tab_lable_"></span>
-                                                    <a href="Axel Johansson_The RiverV.html" title="Axel Johansson_The River" class="img" ><span class="icon_play"></span><img src="public/img/videos/big/Axel-Johansson_The-River-V2.jpg"></a>
+                                                    <a href="Axel Johansson_The RiverV.php" title="Axel Johansson_The River" class="img" ><span class="icon_play"></span><img src="public/img/videos/big/Axel-Johansson_The-River-V2.jpg"></a>
                                                     <span class="icon_time_video">03:33</span> 
                                                     <div class="name_video_large"> 
-                                                        <h3><a href="Axel Johansson_The RiverV.html" title="The River - Axel Johansson " class="name_song">The River</a></h3>
-                                                        <h4><a href="Axel Johansson.html" class="name_singer" title="Axel Johansson" target="_blank">Axel Johansson</a></h4>  
+                                                        <h3><a href="Axel Johansson_The RiverV.php" title="The River - Axel Johansson " class="name_song">The River</a></h3>
+                                                        <h4><a href="Axel Johansson.php" class="name_singer" title="Axel Johansson" target="_blank">Axel Johansson</a></h4>  
                                                     </div>
-                                                    <a href="Axel Johansson_The RiverV.html" title="The River - Axel Johansson "><span class="item-mask-bg"></span></a>
+                                                    <a href="Axel Johansson_The RiverV.php" title="The River - Axel Johansson "><span class="item-mask-bg"></span></a>
                                                 </div>
                                             </li>
 
@@ -184,13 +184,13 @@
                                                 <div class="box_absolute">
                                                     <span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_5495615" wgct="1">93</span></span>
                                                     <span class="tab_lable_"></span>
-                                                    <a href="Culture Code_Make Me Move V2V.html" title="Culture Code_Make Me Move" class="img" ><span class="icon_play"></span><img src="public/img/videos/big/Culture-Code_Make-Me-Move-V2.jpg"></a>
+                                                    <a href="Culture Code_Make Me Move V2V.php" title="Culture Code_Make Me Move" class="img" ><span class="icon_play"></span><img src="public/img/videos/big/Culture-Code_Make-Me-Move-V2.jpg"></a>
                                                     <span class="icon_time_video">03:33</span> 
                                                     <div class="name_video_large">  
-                                                        <h3><a href="Culture Code_Make Me Move V2V.html" title="Culture Code_Make Me Move " class="name_song">Make Me Move</a></h3>
-                                                        <h4><a href="Culture Code.html" class="name_singer" title="Culture Code" target="_blank">Culture Code</a></h4>  
+                                                        <h3><a href="Culture Code_Make Me Move V2V.php" title="Culture Code_Make Me Move " class="name_song">Make Me Move</a></h3>
+                                                        <h4><a href="Culture Code.php" class="name_singer" title="Culture Code" target="_blank">Culture Code</a></h4>  
                                                     </div>
-                                                    <a href="Culture Code_Make Me Move V2V.html" title="Culture Code_Make Me Move "><span class="item-mask-bg"></span></a>
+                                                    <a href="Culture Code_Make Me Move V2V.php" title="Culture Code_Make Me Move "><span class="item-mask-bg"></span></a>
                                                 </div>
                                             </li>
                                             
@@ -199,92 +199,92 @@
                                     
                                     <li class="videosmall">
                                         <div class="box_absolute">                    		
-                                            <a href="Hailee-Steinfeld,-Alesso---Let-Me-GoV.html" title="Hailee Steinfeld, Alesso_Let-Me-Go" class="img" >
+                                            <a href="Hailee-Steinfeld,-Alesso---Let-Me-GoV.php" title="Hailee Steinfeld, Alesso_Let-Me-Go" class="img" >
                                                 <span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_5508556" wgct="1">61</span></span>
                                                 <span class="icon_play"></span>
                                                 <img src="public/img/videos/small/Hailee-Steinfeld,-Alesso---Let-Me-Go.jpg" title="Hailee Steinfeld, Alesso_Let-Me-Go">
                                             </a>
                                             <span class="icon_time_video">02:55</span>
                                         </div>
-                                        <h3><a href="Hailee-Steinfeld,-Alesso---Let-Me-GoV.html" title="Hailee Steinfeld, Alesso_Let-Me-Go" class="name_song_index">Let Me Go</a></h3>
-                                        <h4><a href="Hailee-Steinfeld.html" class="name_singer" title="Hailee Steinfeld" target="_blank">Hailee Steinfeld</a>, <a href="Alesso.html" class="name_singer" title="Alesso" target="_blank">Alesso</a></h4>
+                                        <h3><a href="Hailee-Steinfeld,-Alesso---Let-Me-GoV.php" title="Hailee Steinfeld, Alesso_Let-Me-Go" class="name_song_index">Let Me Go</a></h3>
+                                        <h4><a href="Hailee-Steinfeld.php" class="name_singer" title="Hailee Steinfeld" target="_blank">Hailee Steinfeld</a>, <a href="Alesso.php" class="name_singer" title="Alesso" target="_blank">Alesso</a></h4>
                                     </li>
                                     
                                     <li class="videosmall">
                                         <div class="box_absolute">                    		
-                                            <a href="Ina Wroldsen_Strongest (Alan Walker_ Remix)V.html" title="Ina-Wroldsen---Strongest-(Alan-Walker-Remix)" class="img" >
+                                            <a href="Ina Wroldsen_Strongest (Alan Walker_ Remix)V.php" title="Ina-Wroldsen---Strongest-(Alan-Walker-Remix)" class="img" >
                                                 <span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_5508556" wgct="1">91</span></span>
                                                 <span class="icon_play"></span>
                                                 <img src="public/img/videos/small/Ina-Wroldsen---Strongest-(Alan-Walker-Remix).jpg" title="Ina-Wroldsen---Strongest-(Alan-Walker-Remix)">
                                             </a>
                                             <span class="icon_time_video">03:31</span>
                                         </div>
-                                        <h3><a href="Ina Wroldsen_Strongest (Alan Walker_ Remix)V.html" title="Ina-Wroldsen---Strongest-(Alan-Walker-Remix)" class="name_song_index">Strongest</a></h3>
-                                        <h4><a href="Ina-Wroldsen.html" class="name_singer" title="Ina-Wroldsen" target="_blank">Ina-Wroldsen</a>, <a href="Alan-Walker.html" class="name_singer" title="Alan-Walker" target="_blank">Alan-Walker</a></h4>
+                                        <h3><a href="Ina Wroldsen_Strongest (Alan Walker_ Remix)V.php" title="Ina-Wroldsen---Strongest-(Alan-Walker-Remix)" class="name_song_index">Strongest</a></h3>
+                                        <h4><a href="Ina-Wroldsen.php" class="name_singer" title="Ina-Wroldsen" target="_blank">Ina-Wroldsen</a>, <a href="Alan-Walker.php" class="name_singer" title="Alan-Walker" target="_blank">Alan-Walker</a></h4>
                                     </li>
                                     
                                     <li class="videosmall">
                                         <div class="box_absolute">                    		
-                                            <a href="K-391-&-Alan-Walker---Ignite-feat--Julie-Bergan-&-SeungriV.html" title="K-391-&-Alan-Walker---Ignite-feat--Julie-Bergan-&-Seungri" class="img" >
+                                            <a href="K-391-&-Alan-Walker---Ignite-feat--Julie-Bergan-&-SeungriV.php" title="K-391-&-Alan-Walker---Ignite-feat--Julie-Bergan-&-Seungri" class="img" >
                                                 <span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_5508556" wgct="1">84</span></span>
                                                 <span class="icon_play"></span>
                                                 <img src="public/img/videos/small/K-391-&-Alan-Walker---Ignite-feat--Julie-Bergan-&-Seungri.jpg" title="K-391-&-Alan-Walker---Ignite-feat--Julie-Bergan-&-Seungri">
                                             </a>
                                             <span class="icon_time_video">03:31</span>
                                         </div>
-                                        <h3><a href="K-391-&-Alan-Walker---Ignite-feat--Julie-Bergan-&-SeungriV.html" title="K-391-&-Alan-Walker---Ignite-feat--Julie-Bergan-&-Seungri" class="name_song_index">Ignite</a></h3>
-                                        <h4><a href="K-391.html" class="name_singer" title="K-391" target="_blank">K-391</a>, <a href="Alan-Walker.html" class="name_singer" title="Alan-Walker" target="_blank">Alan-Walker</a></h4>
+                                        <h3><a href="K-391-&-Alan-Walker---Ignite-feat--Julie-Bergan-&-SeungriV.php" title="K-391-&-Alan-Walker---Ignite-feat--Julie-Bergan-&-Seungri" class="name_song_index">Ignite</a></h3>
+                                        <h4><a href="K-391.php" class="name_singer" title="K-391" target="_blank">K-391</a>, <a href="Alan-Walker.php" class="name_singer" title="Alan-Walker" target="_blank">Alan-Walker</a></h4>
                                     </li>
                                     
                                     <li class="videosmall">
                                         <div class="box_absolute">                    		
-                                            <a href="Koni---No-OtherV.html" title="Koni---No-Other" class="img" >
+                                            <a href="Koni---No-OtherV.php" title="Koni---No-Other" class="img" >
                                                 <span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_5508556" wgct="1">87</span></span>
                                                 <span class="icon_play"></span>
                                                 <img src="public/img/videos/small/Koni---No-Other.jpg" title="Koni---No-Other">
                                             </a>
                                             <span class="icon_time_video">03:20</span>
                                         </div>
-                                        <h3><a href="Koni---No-OtherV.html" title="Koni---No-Other" class="name_song_index">No-Other</a></h3>
-                                        <h4><a href="Koni.html" class="name_singer" title="Koni" target="_blank">Koni</a></h4>
+                                        <h3><a href="Koni---No-OtherV.php" title="Koni---No-Other" class="name_song_index">No-Other</a></h3>
+                                        <h4><a href="Koni.php" class="name_singer" title="Koni" target="_blank">Koni</a></h4>
                                     </li>
                                     
                                     <li class="videosmall">
                                         <div class="box_absolute">                    		
-                                            <a href="Martin-Jensen---Solo-DanceV.html" title="Martin-Jensen---Solo-Dance" class="img" >
+                                            <a href="Martin-Jensen---Solo-DanceV.php" title="Martin-Jensen---Solo-Dance" class="img" >
                                                 <span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_5508556" wgct="1">62</span></span>
                                                 <span class="icon_play"></span>
                                                 <img src="public/img/videos/small/Martin-Jensen---Solo-Dance.jpg" title="Martin-Jensen---Solo-Dance">
                                             </a>
                                             <span class="icon_time_video">02:56</span>
                                         </div>
-                                        <h3><a href="Martin-Jensen---Solo-DanceV.html" title="Martin-Jensen---Solo-Dance" class="name_song_index">Solo-Dance</a></h3>
-                                        <h4><a href="Martin-Jensen.html" class="name_singer" title="Martin-Jensen" target="_blank">Martin-Jensen</a></h4>
+                                        <h3><a href="Martin-Jensen---Solo-DanceV.php" title="Martin-Jensen---Solo-Dance" class="name_song_index">Solo-Dance</a></h3>
+                                        <h4><a href="Martin-Jensen.php" class="name_singer" title="Martin-Jensen" target="_blank">Martin-Jensen</a></h4>
                                     </li>
                                     
                                     <li class="videosmall">
                                         <div class="box_absolute">                    		
-                                            <a href="Next-To-Me---Axel-Johansson-Tina-StachowiakV.html" title="Next-To-Me---Axel-Johansson-Tina-Stachowiak" class="img" >
+                                            <a href="Next-To-Me---Axel-Johansson-Tina-StachowiakV.php" title="Next-To-Me---Axel-Johansson-Tina-Stachowiak" class="img" >
                                                 <span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_5508556" wgct="1">66</span></span>
                                                 <span class="icon_play"></span>
                                                 <img src="public/img/videos/small/Next-To-Me---Axel-Johansson-Tina-Stachowiak.jpg" title="Next-To-Me---Axel-Johansson-Tina-Stachowiak">
                                             </a>
                                             <span class="icon_time_video">03:00</span>
                                         </div>
-                                        <h3><a href="Next-To-Me---Axel-Johansson-Tina-StachowiakV.html" title="Next-To-Me---Axel-Johansson-Tina-Stachowiak" class="name_song_index">Next-To-Me</a></h3>
-                                        <h4><a href="Axel-Johansson.html" class="name_singer" title="Axel-Johansson" target="_blank">Axel-Johansson</a>, <a href="Tina-Stachowiak.html" class="name_singer" title="Tina-Stachowiak" target="_blank">Tina-Stachowiak</a></h4>
+                                        <h3><a href="Next-To-Me---Axel-Johansson-Tina-StachowiakV.php" title="Next-To-Me---Axel-Johansson-Tina-Stachowiak" class="name_song_index">Next-To-Me</a></h3>
+                                        <h4><a href="Axel-Johansson.php" class="name_singer" title="Axel-Johansson" target="_blank">Axel-Johansson</a>, <a href="Tina-Stachowiak.php" class="name_singer" title="Tina-Stachowiak" target="_blank">Tina-Stachowiak</a></h4>
                                     </li>
                                     
                                     <li class="videosmall">
                                         <div class="box_absolute">                    		
-                                            <a href="The-Script---SuperheroesV.html" title="The-Script---Superheroes" class="img" >
+                                            <a href="The-Script---SuperheroesV.php" title="The-Script---Superheroes" class="img" >
                                                 <span class="view_mv"><span class="icon_view"></span><span id="NCTCounter_sg_5508556" wgct="1">82</span></span>
                                                 <span class="icon_play"></span>
                                                 <img src="public/img/videos/small/The-Script---Superheroes.jpg" title="The-Script---Superheroes">
                                             </a>
                                             <span class="icon_time_video">04:06</span>
                                         </div>
-                                        <h3><a href="The-Script---SuperheroesV.html" title="The-Script---Superheroes" class="name_song_index">Superheroes</a></h3>
+                                        <h3><a href="The-Script---SuperheroesV.php" title="The-Script---Superheroes" class="name_song_index">Superheroes</a></h3>
                                         <h4><a href="The-Script.html" class="name_singer" title="The-Script" target="_blank">The-Script</a></h4>
                                     </li>
                                     
